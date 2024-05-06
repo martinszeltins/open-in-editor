@@ -1,8 +1,8 @@
 const express = require('express')
-const launchMiddleware = require('launch-editor-middleware')
+const launchEditorMiddleware = require('./launch-editor-middleware')
 const app = express()
 
-app.use('/__open-in-editor', launchMiddleware())
+app.use('/__open-in-editor', launchEditorMiddleware('code'))
 
 app.all('*', (request, response, next) => {
 	response.header('Access-Control-Allow-Origin', '*')
