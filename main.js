@@ -11,4 +11,4 @@ app.all('*', (request, response, next) => {
 	next()
 })
 
-app.listen(5173)
+app.listen(44044, '0.0.0.0')

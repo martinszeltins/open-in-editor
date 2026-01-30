@@ -23,10 +23,14 @@ module.exports = (specifiedEditor, srcRoot, onErrorCallback) => {
       res.statusCode = 500
       res.end(`launch-editor-middleware: required query param "file" is missing.`)
     } else {
+      const filePath = file
+
       if (remote) {
-        launch(path.resolve(srcRoot, file), specifiedEditor, remote, onErrorCallback)
+        console.log('Launching editor for remote file (remote):', filePath)
+        launch(filePath, specifiedEditor, remote, onErrorCallback)
       } else {
-          launch(path.resolve(srcRoot, file), specifiedEditor, '', onErrorCallback)
+        console.log('Launching editor for file:', filePath)
+        launch(filePath, specifiedEditor, '', onErrorCallback)
       }
       res.end()
     }
