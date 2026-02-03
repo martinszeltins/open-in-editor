@@ -11,9 +11,7 @@ npx @martinszeltins/open-in-editor@latest
 This starts a server on port `44044`. Send requests to open files:
 
 ```
-GET http://localhost:44044/__open-in-editor?file=/path/to/file.js
-
-$ curl "http://localhost:44044/__open-in-editor?file=/path/to/file.js"
+$ curl "http://localhost:44044/__open-in-editor?file=/home/martins/Programming/open-in-editor/main.js:3"
 ```
 
 ## License
