@@ -1,6 +1,6 @@
 {
   "name": "@martinszeltins/open-in-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open files in your editor from the browser",
   "main": "main.js",
   "bin": {
